@@ -84,6 +84,20 @@ public class SpeedingFine {
     
     public double getFine()     {
         // 2.1.3
+        if (isFinable()) 
+        {
+            double fine = 100.0;
+            double diff = getSpeed() - getSpeedLimit();
+            double factor = 0.0;
+            
+            while (factor < diff/10) 
+            {
+                fine+=(factor*200);
+                factor++;
+            }
+            return fine;
+        }
+        
         return 0.0;
     }
 
