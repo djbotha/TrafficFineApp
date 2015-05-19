@@ -4,6 +4,10 @@
  */
 package speedingfineapp;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author Examiner
@@ -146,7 +150,23 @@ public class ProcessingFines extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcessFinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessFinesActionPerformed
-        // 2.2.1
+        try 
+        {
+            Scanner s = new Scanner(new File("F:\\Lesson 9\\2014 Nov V1\\DataFilesEng\\TrafficFineApp\\SpeedindOffences.txt"));
+            String st = s.nextLine();
+            
+            s = new Scanner(st);
+            s.useDelimiter("#");
+
+            txaOutput.setText("Registration Number\tType\tSpeed\tFine\n");
+            
+            String registrationNumber = s.next();
+            
+            
+        }catch(IOException e)
+        {
+            System.out.println("File not found: " + e);
+        }
     }//GEN-LAST:event_btnProcessFinesActionPerformed
 
     private void btnFinesFromOtherProvincesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinesFromOtherProvincesActionPerformed

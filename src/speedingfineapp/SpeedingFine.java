@@ -112,7 +112,8 @@ public class SpeedingFine {
     }
 
     @Override
-    public String toString() {
+    public String toString() 
+    {
         // 2.1.4
         if (isFinable()) 
         {
@@ -120,5 +121,5 @@ public class SpeedingFine {
         }
         
         return registrationNumber + "\t\t\t\t\tNoFine";
-        }
+    }
 }
