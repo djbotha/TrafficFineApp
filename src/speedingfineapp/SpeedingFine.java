@@ -61,7 +61,22 @@ public class SpeedingFine {
         
         switch(area)
         {
-            
+            case "SU":
+                return 60;
+            case "SP":
+                return 80;
+            case "SO":
+                return 120;
+            case "DU":
+                return 80;
+            case "DP":
+                return 100;
+            case "DO":
+                return 120;
+            case "SON":
+                return 100;
+            case "SPN":
+                return 70;
         }
         
         return 1;
