@@ -114,6 +114,11 @@ public class SpeedingFine {
     @Override
     public String toString() {
         // 2.1.4
-        return "output";
-    }
+        if (isFinable()) 
+        {
+            return registrationNumber + "\t" + areaCode + "\t" + speed + "\t" + getFine();
+        }
+        
+        return registrationNumber + "\t\t\t\t\tNoFine";
+        }
 }
