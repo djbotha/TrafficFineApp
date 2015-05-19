@@ -56,8 +56,8 @@ public class SpeedingFine {
         
         if (this.roadCode == 'N')
             area = ""+ this.laneCode + this.areaCode + this.roadCode;
-        
-        area = "" + this.laneCode + this.areaCode;
+        else
+            area = "" + this.laneCode + this.areaCode;
         
         switch(area)
         {
